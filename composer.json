@@ -1,5 +1,5 @@
 {
-    "name": "jarvis/client-php-construct",
+    "name": "oosor/client-php-construct",
     "description": "Query builder for API server api-db",
     "type": "library",
     "license": "MIT",
