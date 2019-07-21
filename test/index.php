@@ -8,6 +8,8 @@
 
 require __DIR__.'/../vendor/autoload.php';
 
+header('Content-Type: application/json');
+
 $insert = new \Oosor\ClientConstruct\InsertBuilder('table_insert');
 $update = new \Oosor\ClientConstruct\UpdateBuilder('table_update');
 $updateTableName = new \Oosor\ClientConstruct\UpdateBuilder('table_update_name');
@@ -33,13 +35,13 @@ $update->addColumn('col_name_4', function (\Oosor\ClientConstruct\Models\Build $
 $updateTableName->setTableNewName('table_update_new_name');
 
 
-print 'Result for $insert -> \Oosor\ClientConstruct\InsertBuilder: ';
-print_r($insert->getResult());
-print '<br><br>';
+//print 'Result for $insert -> \Oosor\ClientConstruct\InsertBuilder: ';
+echo json_encode($insert->getResult());
+//print '<br><br>';
 
-print 'Result for $update -> \Oosor\ClientConstruct\UpdateBuilder: ';
-print_r($update->getResult());
-print '<br><br>';
+//print 'Result for $update -> \Oosor\ClientConstruct\UpdateBuilder: ';
+//echo json_encode($update->getResult());
+//print '<br><br>';
 
-print 'Result for $updateTableName -> \Oosor\ClientConstruct\UpdateBuilder: ';
-print_r($updateTableName->getResult());
+//print 'Result for $updateTableName -> \Oosor\ClientConstruct\UpdateBuilder: ';
+//echo json_encode($updateTableName->getResult());
